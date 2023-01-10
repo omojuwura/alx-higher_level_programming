@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-class MyInt(int):
-    """ Class that inherits from class int"""
+MyInt = __import__('100-my_int').MyInt
 
-    def __eq__(self, other):
-        """ Method that returns != check """
-        return int.__ne__(self, other)
-
-    def __ne__(self, other):
-        """ Method that returns == check """
-        return int.__eq__(self, other)
+my_i = MyInt(3)
+print(my_i)
+print(my_i == 3)
+print(my_i != 3)
